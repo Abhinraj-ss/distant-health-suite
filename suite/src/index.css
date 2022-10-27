@@ -6,8 +6,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-inter: Inter;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font sizes */
+  --font-size-base: 28px;
+  --font-size-lg: 40px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-indigo-100: rgba(28, 125, 240, 0.12);
+  --color-black: #000;
+
+  /* border radiuses */
+  --br-md: 25px;
 }

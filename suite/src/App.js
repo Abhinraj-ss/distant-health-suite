@@ -1,12 +1,10 @@
-import './App.css';
-
 import React from 'react'
+import MonitorHome from './Monitoring/MonitorHome';
 
 function App() {
   return (
-    <div>
-      <h1>Distatnt Health suite</h1>
-      <p>Loading.........</p>
+    <div className='App'>
+      <MonitorHome/>
     </div>
     
   )
