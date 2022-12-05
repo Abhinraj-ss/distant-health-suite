@@ -16,8 +16,8 @@ body {
   --font-inter: Inter;
 
   /* font sizes */
-  --font-size-base: 28px;
-  --font-size-lg: 40px;
+  --font-size-base: 1.5em;
+  --font-size-lg: 1.6em;
 
   /* Colors */
   --color-white: #fff;
