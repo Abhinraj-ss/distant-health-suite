@@ -11,12 +11,8 @@ import close from '../Assets/Close.svg'
 
 function MonitorHome() {
   var patientID = 123;
-  const [url,setUrl] = useState(()=>{
-    if(process.env.NODE_ENV==='production'){
-      return "https://distantsuite.onrender.com" 
-    } else if(process.env.NODE_ENV==='development')
-       return "http://localhost:5000"
-  } )
+  const url = (process.env.NODE_ENV==='production')? 
+  "https://distantsuite.onrender.com":"http://localhost:5000"
   const api = axios.create({
     baseURL: url
   })
