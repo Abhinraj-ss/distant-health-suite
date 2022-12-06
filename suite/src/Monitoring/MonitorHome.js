@@ -34,7 +34,7 @@ function MonitorHome() {
       console.log(error);
     });
   }
-  getData()
+  // getData()
   return (
     <div className="body" >
       {/* <img className="bg" alt="" src={bg} /> */}
