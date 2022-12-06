@@ -1,6 +1,5 @@
 import './Monitor.css';
 import axios from "axios"
-import useState from "react"
 import Ecg from './Ecg';
 import Temp from './Temp'
 import PulseOxy from './PulseOxy';
@@ -35,6 +34,7 @@ function MonitorHome() {
     });
   }
   // getData()
+  console.log("got into page!!");
   return (
     <div className="body" >
       {/* <img className="bg" alt="" src={bg} /> */}
