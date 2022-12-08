@@ -2,7 +2,8 @@ import './Monitor.css';
 import axios from "axios"
 import Ecg from './Ecg';
 import Temp from './Temp'
-import PulseOxy from './PulseOxy';
+import BPM from './BPM';
+import SpO2 from './SpO2';
 import bg from '../Assets/bg.png'
 import user from '../Assets/User.svg'
 import tower from '../Assets/Tower.svg'
@@ -33,7 +34,7 @@ function MonitorHome() {
       console.log(error);
     });
   }
-  // getData()
+  getData()
   console.log("got into page!!");
   return (
     <div className="body" >
@@ -61,7 +62,8 @@ function MonitorHome() {
       <div className="boxes">
         <Ecg/>
         <Temp/>
-        <PulseOxy/>
+        <BPM/>
+        <SpO2/>
       </div>
       
     </div>

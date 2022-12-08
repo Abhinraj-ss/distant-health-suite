@@ -75,10 +75,11 @@
   position: relative;
   top: 2em;
   left: 14em;
-  max-width: 80%;
+  max-width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  column-gap: 1.5em;
 }
 .ecg{
   height: 7em;
@@ -107,6 +108,7 @@
   flex-direction: column;
   align-items: center;
   padding-block: 1em;
+  justify-content: center;
 }
 .temp>p{
   font-size:smaller;
