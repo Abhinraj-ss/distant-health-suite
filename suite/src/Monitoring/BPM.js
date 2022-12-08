@@ -5,7 +5,7 @@ function BPM() {
   return (
     <div className="temp">
         <img className="tempVector" alt="" src={heart} />
-        <p>28.04<sup>o</sup>C</p>
+        <p>65</p>
     </div>
   )
 }

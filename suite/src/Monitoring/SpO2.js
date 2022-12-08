@@ -5,7 +5,7 @@ function SpO2() {
   return (
     <div className="temp">
         <img className="tempVector" alt="" src={o2} />
-        <p>28.04<sup>o</sup>C</p>
+        <p>98%</p>
     </div>
   )
 }
