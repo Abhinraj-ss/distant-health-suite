@@ -18,7 +18,7 @@ function MonitorHome() {
   })
   const getData = async() =>{
     
-    await api.post("/",{p_id:patientID})
+    await api.post("/test",{p_id:patientID})
     .then(function (response) {
       console.log(response);
       if(response.status === 200){
