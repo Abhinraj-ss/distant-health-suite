@@ -4,7 +4,6 @@ import Ecg from './Ecg';
 import Temp from './Temp'
 import BPM from './BPM';
 import SpO2 from './SpO2';
-import bg from '../Assets/bg.png'
 import user from '../Assets/User.svg'
 import tower from '../Assets/Tower.svg'
 import close from '../Assets/Close.svg'

@@ -1,0 +1,91 @@
+.Dashboard{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100vh;
+  background-image: url("../Assets/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-right: auto;
+  color: #173278;
+}
+.logo{
+  height: 2.5em;
+}
+.patientId{
+  margin-right: 1em;
+}
+.logout{
+  margin-top: 0.2em;
+  margin-right: 2em;
+  color: #173278;
+}
+.greeting{
+  display: flex;
+  flex-direction: row;
+  margin-inline: 2em;
+  width: 95vw;
+  padding: 1em;
+  background-color: #173378dd;
+  color: white;
+  border-radius: 1em;
+  padding: 2em;
+  justify-content: space-between;
+}
+.time{
+  text-align: start;
+}
+.vl {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  height: 100%;
+}
+.doctor{
+  margin-right: 0%;
+  text-align: end;
+}
+.observation{
+  display: flex;
+  flex-direction: row;
+  margin-inline: 2em;
+  width: 95vw;
+  padding: 1em;
+  background-color: #17337848;
+  color: white;
+  border-radius: 1em;
+  padding: 1.5em;
+  align-items: center;
+  justify-content: space-between;
+}
+.observation>button{
+  background-color: #173278;
+  border-color: #173278;
+  height: fit-content;
+}
+.observation>button:hover{
+  background-color: #173278;
+  border-color: #173278;
+}
+.totalCount>p{
+  color: #173278;
+}
+.assistance{
+  margin-inline: 2em;
+  width: 95vw;
+  padding: 1em;
+  background-color: #f300007e;
+  color: white;
+  border-radius: 1em;
+  padding: 1.5em;
+}
