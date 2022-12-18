@@ -1,9 +1,10 @@
-
+import LineGraph from "./LineGraph"
+import './Monitor.css'
 
 function Ecg() {
   return (
-    <div className="ecg">
-        <p>ECG</p>
+      <div className="ecg">
+        <LineGraph/>
       </div>
   )
 }

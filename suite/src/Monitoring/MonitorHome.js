@@ -37,8 +37,6 @@ function MonitorHome() {
   console.log("got into page!!");
   return (
     <div className="body" >
-      {/* <img className="bg" alt="" src={bg} /> */}
-
       <div className="details">
         <img className="user" alt="" src={user} />  
         <h4>Patient Name</h4>
