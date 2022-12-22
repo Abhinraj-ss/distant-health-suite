@@ -1,5 +1,6 @@
-import '../App.css'
-import heart from '../Assets/heart.svg'
+import React from 'react';
+import '../../App.css'
+import heart from '../../Assets/heart.svg'
 
 function BPM() {
   return (

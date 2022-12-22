@@ -1,3 +1,4 @@
+import React from 'react';
 import LineGraph from "./LineGraph"
 import './Monitor.css'
 

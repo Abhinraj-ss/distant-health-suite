@@ -1,6 +1,7 @@
-import '../App.css'
-import home from '../Assets/Home.svg'
-import temp from '../Assets/Temp.svg'
+import React from 'react';
+import '../../App.css'
+import home from '../../Assets/Home.svg'
+import temp from '../../Assets/Temp.svg'
 
 function Temp() {
   return (

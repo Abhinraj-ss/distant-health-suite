@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 1em;
   height: 100vh;
-  background-image: url("../Assets/bg.svg");
+  background-image: url("../../Assets/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -61,7 +61,7 @@
   margin-inline: 2em;
   width: 95vw;
   padding: 1em;
-  background-color: #17337848;
+  background-color: #1733785f;
   color: white;
   border-radius: 1em;
   padding: 1.5em;

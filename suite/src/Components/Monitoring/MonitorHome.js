@@ -1,14 +1,20 @@
+import React,{useEffect,useState} from 'react';
 import './Monitor.css';
 import axios from "axios"
 import Ecg from './Ecg';
 import Temp from './Temp'
 import BPM from './BPM';
 import SpO2 from './SpO2';
-import user from '../Assets/User.svg'
-import tower from '../Assets/Tower.svg'
-import close from '../Assets/Close.svg'
+import user from '../../Assets/User.svg'
+import tower from '../../Assets/Tower.svg'
+import { Button } from 'react-bootstrap';
+import {db} from './firebase'
+import { onValue, ref } from "firebase/database";
+
+
 
 function MonitorHome() {
+  const [projects, setProjects] = useState([]);
   var patientID = 123;
   const url = (process.env.NODE_ENV==='production')? 
   "https://distantsuite.onrender.com":"http://localhost:5000"
@@ -34,6 +40,23 @@ function MonitorHome() {
     });
   }
   getData()
+
+  useEffect(() => {
+    const query = ref(db, "ecg");
+    return onValue(query, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data)
+      if (snapshot.exists()) {
+        Object.values(data).map((project) => {
+          setProjects((projects) => [...projects, project]);
+        });
+      }
+    });
+  }, []);
+
+
+
+
   console.log("got into page!!");
   return (
     <div className="body" >
@@ -54,10 +77,10 @@ function MonitorHome() {
           <p>Health Status</p>
         </div>
         <img className="tower" alt="" src={tower}/>
-        <img className ="close" alt="" src = {close}/>
+        <Button className="close" type='primary'>Goto Dashboard</Button>
       </div>
       <div className="boxes">
-        <Ecg/>
+        <Ecg/> 
         <Temp/>
         <BPM/>
         <SpO2/>

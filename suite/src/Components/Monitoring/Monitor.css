@@ -6,7 +6,7 @@
   font-size: var(--font-size-base);
   color: var(--color-black);
   font-family: var(--font-inter);
-  background-image: url("../Assets/bg.svg");
+  background-image: url("../../Assets/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -72,8 +72,12 @@
   
 }
 
-.tower, .close{
+.tower{
   width: 1.3rem;
+}
+.close{
+  background-color: red;
+  border: none;
 }
 .boxes{
   position: relative;
@@ -86,12 +90,13 @@
   column-gap: 1.5em;
 }
 .ecg{
-  height: 7em;
+  height: 100%;
   width: 22.5em;
   font-size: var(--font-size-lg);
   border-radius: var(--br-md);
   border: 1px rgba(28, 125, 240, 0.5) solid;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.5em;
 }
 .ecg>p{
   opacity: 0.51;
@@ -138,6 +143,3 @@
   margin-left: 2rem;
 }
 
-.ecg{
-  height: 100%;
-}

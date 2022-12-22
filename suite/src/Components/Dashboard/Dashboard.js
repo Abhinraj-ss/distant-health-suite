@@ -1,7 +1,7 @@
-import { useState} from 'react'
+import { React,useState} from 'react'
 import {Form,Button} from 'react-bootstrap'
 import './Dashboard.css'
-import Logo from '../Assets/logo.png'
+import Logo from '../../Assets/logo.svg'
 import AddPatient from './AddPatient'
 function Dashboard() {
   const [show, setShow] = useState(false);
@@ -23,7 +23,7 @@ function Dashboard() {
     <div className='greeting'>
       <div className="time">
         <h3>Good Morning</h3>
-        <h5>03:45:00 PM | 21 August 2022</h5>
+        <h5>08:45:00 AM | 21 August 2022</h5>
       </div>
       <div class="vl"></div>
       <div className="doctor">

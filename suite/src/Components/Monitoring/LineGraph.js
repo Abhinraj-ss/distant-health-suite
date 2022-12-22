@@ -1,22 +1,21 @@
 import React from "react";
-import { Chart } from "chart.js";
+import { Chart,registerables  } from "chart.js";
 import StreamingPlugin from "chartjs-plugin-streaming";
 import { Line } from "react-chartjs-2";
-import "chartjs-adapter-luxon";
+import 'chartjs-adapter-date-fns'
 import './Monitor.css'
 
 
 Chart.register(StreamingPlugin);
+Chart.register(...registerables);
 
 const data={
   datasets: [
     {
-      label: "Dataset 1",
+      label: "ECG",
       backgroundColor: "rgba(28, 125, 240, 0.5)",
       borderColor: "rgb(23, 50, 120)",
-      borderDash: [8, 4],
-      fill: true,
-      cubicInterpolationMode: "monotone",
+      fill: false,
       data: []
     }
   ]
