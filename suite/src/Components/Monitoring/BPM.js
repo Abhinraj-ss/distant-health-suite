@@ -2,11 +2,11 @@ import React from 'react';
 import '../../App.css'
 import heart from '../../Assets/heart.svg'
 
-function BPM() {
+function BPM({value}) {
   return (
     <div className="temp">
         <img className="tempVector" alt="" src={heart} />
-        <p>65</p>
+        <p>{value}</p>
     </div>
   )
 }

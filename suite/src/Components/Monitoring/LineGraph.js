@@ -9,38 +9,43 @@ import './Monitor.css'
 Chart.register(StreamingPlugin);
 Chart.register(...registerables);
 
-const data={
-  datasets: [
-    {
-      label: "ECG",
-      backgroundColor: "rgba(28, 125, 240, 0.5)",
-      borderColor: "rgb(23, 50, 120)",
-      fill: false,
-      data: []
-    }
-  ]
-}
 
-const options={
-  scales: {
-    x: {
-      type: "realtime",
-      realtime: {
-        delay: 2000,
-        onRefresh: (chart) => {
-          chart.data.datasets.forEach((dataset) => {
-            dataset.data.push({
-              x: Date.now(),
-              y: Math.random()
+
+function LineGraph({value}) {
+  console.log(value)
+  const data={
+    datasets: [
+      {
+        label: "ECG",
+        backgroundColor: "rgba(28, 125, 240, 0.5)",
+        borderColor: "rgb(23, 50, 120)",
+        fill: false,
+        data: []
+      }
+    ]
+  }
+  
+  const options={
+    scales: {
+      x: {
+        type: "realtime",
+        realtime: {
+          onRefresh: (chart) => {
+            chart.data.datasets.forEach((dataset) => {
+              dataset.data.push({
+                x: Date.now(),
+                y: value
+              });
             });
-          });
+          }
         }
+      },
+      y:{
+        max:3500,
+        min:0
       }
     }
   }
-}
-
-function LineGraph() {
   return (
       <Line 
       data={data}

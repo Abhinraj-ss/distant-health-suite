@@ -3,13 +3,13 @@ import '../../App.css'
 import home from '../../Assets/Home.svg'
 import temp from '../../Assets/Temp.svg'
 
-function Temp() {
+function Temp({rTemp,bTemp}) {
   return (
     <div className="temp">
         <img className="tempVector" alt="" src={home}/>  
-        <p>29.04<sup>o</sup>C</p>
+        <p>{rTemp}<sup>o</sup>C</p>
         <img className="tempVector" alt="" src={temp} />
-        <p>28.04<sup>o</sup>C</p>
+        <p>{bTemp}<sup>o</sup>C</p>
   </div>
   )
 }
