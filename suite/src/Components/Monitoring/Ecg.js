@@ -2,11 +2,10 @@ import React from 'react';
 import LineGraph from "./LineGraph"
 import './Monitor.css'
 
-function Ecg({value}) {
-  console.log(value)
+function Ecg() {
   return (
       <div className="ecg">
-        <LineGraph value={value}/>
+        <LineGraph />
       </div>
   )
 }

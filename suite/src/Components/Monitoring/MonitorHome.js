@@ -8,18 +8,10 @@ import SpO2 from './SpO2';
 import user from '../../Assets/User.svg'
 import tower from '../../Assets/Tower.svg'
 import { Button } from 'react-bootstrap';
-import {db} from './firebase'
-import { onValue, ref } from "firebase/database";
 
 
 
 function MonitorHome() {
-  const [projects, setProjects] = useState([]);
-  const [ecgValue,setEcgValue] = useState();
-  const [rTempValue,setrTempValue] = useState();
-  const [bTempValue,setbTempValue] = useState();
-  const [spo2Value,setSpo2Value] = useState();
-  const [bpmValue,setBpmValue] = useState();
   var patientID = 123;
   const url = (process.env.NODE_ENV==='production')? 
   "https://distantsuite.onrender.com":"http://localhost:5000"
@@ -46,27 +38,6 @@ function MonitorHome() {
   }
   getData()
 
-  useEffect(() => {
-    const query = ref(db, "values");
-    return onValue(query, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data,data['ecg'])
-      setEcgValue(data['ecg'])
-      setrTempValue(data['rTemp'])
-      setbTempValue(data['bTemp'])
-      setSpo2Value(data['spo2'])
-      setBpmValue(data['bpm'])
-      if (snapshot.exists()) {
-        Object.values(data).map((project) => {
-          setProjects((projects) => [...projects, project]);
-        });
-      }
-    });
-  }, []);
-
-
-  console.log(ecgValue)
-
   console.log("got into page!!");
   return (
     <div className="body" >
@@ -90,10 +61,10 @@ function MonitorHome() {
         <Button className="close" type='primary'>Goto Dashboard</Button>
       </div>
       <div className="boxes">
-        <Ecg value={ecgValue}/> 
-        <Temp rTemp={rTempValue} bTemp={bTempValue}/>
-        <BPM value={bpmValue}/>
-        <SpO2 value={spo2Value}/>
+        <Ecg /> 
+        <Temp />
+        <BPM />
+        <SpO2 />
       </div>
       
     </div>
