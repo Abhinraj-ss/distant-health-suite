@@ -18,6 +18,8 @@ function MonitorHome() {
   const api = axios.create({
     baseURL: url
   })
+  
+  /*
   const getData = async() =>{
     
     await api.post("/test",{p_id:patientID})
@@ -37,6 +39,7 @@ function MonitorHome() {
     });
   }
   getData()
+  */
 
   console.log("got into page!!");
   return (

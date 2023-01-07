@@ -1,4 +1,4 @@
-import {React,useState} from 'react'
+import React,{useState} from 'react'
 import logo from '../../Assets/logo-wyt.svg'
 import imgDr from '../../Assets/AuthDr.svg'
 import axios from 'axios'

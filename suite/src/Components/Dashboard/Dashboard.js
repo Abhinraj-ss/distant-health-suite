@@ -1,6 +1,8 @@
-import { React,useState} from 'react'
+import  React,{useState} from 'react'
 import {Form,Button} from 'react-bootstrap'
 import './Dashboard.css'
+import { FaSearch } from 'react-icons/fa';
+
 import Logo from '../../Assets/logo.svg'
 import AddPatient from './AddPatient'
 function Dashboard() {
@@ -17,6 +19,7 @@ function Dashboard() {
       <Form.Group className="patientId mb-3">
         <Form.Control placeholder="Patient ID" />
       </Form.Group>
+      <Button><FaSearch/></Button>
       <h5 className='logout'>LogOut</h5>
     </div>
 
